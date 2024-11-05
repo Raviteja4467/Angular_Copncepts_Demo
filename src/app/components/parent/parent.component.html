@@ -1,0 +1,19 @@
+<p class="color">parent works!</p>
+<!-- {{res}} -->
+<!-- {{ravi}}
+
+<button class="btn btn-primary" (click)="updateMsg()" >Click</button> -->
+
+<hr>
+<app-child [pMan]="msg" (pass)="res=$event">
+    <h3>This is Ravi</h3>
+    <h3>This is Ravi</h3>
+    <h3>This is Ravi</h3>
+    <h3>This is Ravi</h3>
+    <h3>This is Ravi</h3>
+</app-child>
+
+<app-child [pMan]="msg" (pass)="requestSent($event)"></app-child>
+
+<!-- <app-child [StudentData]="sData"></app-child> -->
+

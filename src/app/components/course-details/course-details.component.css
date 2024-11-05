@@ -1,0 +1,7 @@
+table, th, td{
+    border:1px solid black;
+    width: 400px;
+    height: 100px;
+    padding: 20px;
+    background-color: #f1f4ed ;
+}

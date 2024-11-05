@@ -1,0 +1,33 @@
+
+<h2 *ngFor="let name of names">{{name}}</h2>
+
+<h2 *ngFor="let x of names; index as i">Value:{{x}} --- > Index:{{i}}</h2>
+
+<h2 *ngFor="let x of names; even as i">Value:{{x}} --- > Even Position:{{i}}</h2>
+
+<h2 *ngFor="let x of names; odd as i">Value:{{x}} --- > Odd Position:{{i}}</h2>
+
+
+<h2 *ngFor="let data of emp">
+    {{data.id}}
+    {{data.name}}
+    {{data.role}}
+</h2>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let data of emp">
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.role}}</td>
+      </tr>
+    </tbody>
+  </table>

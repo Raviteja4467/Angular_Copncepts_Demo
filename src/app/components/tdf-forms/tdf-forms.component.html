@@ -1,0 +1,49 @@
+ <h1 >User Registration</h1>
+<div class="container">
+    <form #userForm="ngForm" (ngSubmit)="submit(userForm)">
+<div class="row">
+ <div class="col-6">
+        <input class="form-control form-control-lg" type="text" placeholder="Username" aria-label=".form-control-lg example" ngModel name="name" required #uname="ngModel" minlength="3" [class.is-invalid]="uname.invalid && uname.touched">
+    <small style="color:brown" [class.d-none]="uname.valid||uname.untouched">Username is reuqired<sup>*</sup></small>    
+    </div>
+    <div class="col-6">
+        <div class="form-check form-check-inline" style="margin-top: 20px;" >
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" ngModel name="gender">
+            <label class="form-check-label" for="inlineRadio1"><span style="font-size:large;">Male</span></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" ngModel name="gender">
+            <label class="form-check-label" for="inlineRadio2"><span style="font-size:large">Female</span></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" ngModel name="gender">
+            <label class="form-check-label" for="inlineRadio3"><span style="font-size:large" >Others</span></label>
+          </div>
+    </div>
+    <div class="row">
+        <div class="col-6" >
+            <input class="form-control form-control-lg" type="email" placeholder="abc@gmail.com" aria-label=".form-control-lg example" style="margin-top: 30px;" ngModel name="email" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [class.is-invalid]="email.invalid && email.touched" required>
+        </div>
+        <div class="col-6">
+            <select class="form-select form-select-lg mb-3" aria-label="Large select example" style="margin-top: 30px;" ngModel name="course">
+                <option selected>Open this select menu</option>
+                <option value="x.key" *ngFor="let x of courses">{{x}}</option>
+              </select>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col-6">
+            <input class="form-control form-control-lg" type="text" placeholder="Phone Number" aria-label=".form-control-lg example" style="margin-top: 30px;" ngModel name="pnum" #phnum="ngModel" >
+        </div>
+        <div class="form-check col-6" style = "margin-top:50px;">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="margin-left: 30px;" ngModel name="remember">
+            <label class="form-check-label" for="flexCheckDefault">
+            </label>
+          <span style="margin-top: 50px;">  Remember me</span>   </div> 
+          
+    </div>
+    <div class="col-3" style="margin-top: 30px;" >  <input type="submit" placeholder="register" class="btn btn-primary"  style="margin-left: 600px;"></div>
+</div>
+    </form>
+</div>
+{{userForm.value|json}}

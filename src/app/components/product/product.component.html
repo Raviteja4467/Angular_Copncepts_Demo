@@ -1,0 +1,22 @@
+<p>product works!</p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th>JSON Response</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let data of products">
+        <td>{{data.id}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.description}}</td>
+        <td *ngIf="data.id==products1?.id">{{products1 | json}}</td>
+        <td><button class="btn btn-danger" (click)="proDelete(data.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>

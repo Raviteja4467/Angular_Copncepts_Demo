@@ -1,0 +1,16 @@
+<p>class-binding works!</p>
+
+<!--<p class="textColor">Hi good morning</p>
+<p class="textSize">I am Size</p>
+
+<p [class]="myClass">Hello all</p>
+
+<p class="textColor textSize">class-binding works!</p>
+
+<p [class]="myGroup">class-binding works12334</p>  -->
+
+<p [ngClass]="myGroup">class-binding works12334</p>
+
+<p [class]="isRequired?'textColor':'textSize'">class-binding works</p>
+
+<p [class.textColor]="isRequired">class-binding works</p>

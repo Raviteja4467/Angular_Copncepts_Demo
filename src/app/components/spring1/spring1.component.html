@@ -1,0 +1,20 @@
+<div class="registration_form">
+    <form [formGroup]="registrationForm" (ngSubmit)="postData()">
+        <h3 style="color:red"> User Registration Form</h3>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="id"  placeholder="Enter your Id">
+           
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="brand"  placeholder="Enter your Brand" >    
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="price"  placeholder="Enter your Price" >    
+        </div>
+        <button class="btn btn-primary" > Register</button>
+        <!-- <button class=" btn btn-danger" style="margin-left: 5px;"> Display</button> -->
+    </form>
+  </div>
+  <div style="color:red;text-align: center;" class="mt-5">
+   
+  </div>

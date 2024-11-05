@@ -1,0 +1,5 @@
+<!--<h3 *ngIf="isDisplay" style="color: red;">Hello All </h3>-->
+<div *ngIf="isDisplay;else other_content">
+    <p>hello</p>
+</div>
+<ng-template #other_content>hiiiiiiiii</ng-template>

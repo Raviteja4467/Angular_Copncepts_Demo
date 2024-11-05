@@ -1,0 +1,23 @@
+<div style="background-color: #d4efdf">
+    <h2 style="text-align: center;">THE COURSES OFFERED ARE AS FOLLOWS </h2>
+    <br>
+    <p>We offer different types of courses as per the requirement and provide lifetime free service,
+        you may check for payements at coursedetail page.
+    </p>
+    <br>
+    <ul>Courses Offered :
+        <li>Java Fullstack</li>
+        <li>Python Fullstack</li>
+        <li>web Development</li>
+        <li>Android app Development</li>
+    </ul>
+    <br>
+</div>
+
+<br><br> 
+
+<h2 *ngFor="let data of course">
+    {{data.id}} ----
+    {{data.name}} ------
+    {{data.fee}} 
+</h2>

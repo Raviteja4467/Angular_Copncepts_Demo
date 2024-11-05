@@ -1,0 +1,45 @@
+<div style="background-color: #d4efdf">
+    <h2 align="center">THE COURSES Details AS FOLLOWS</h2>
+    <br><br>
+    <table align="center" > 
+        <tr >
+            <th><b>Course Name</b></th>
+            <th><b>Fee</b></th>
+        </tr>
+        <tr>
+            <th>Java Fullstack</th>
+            <th>40000/-</th>
+        </tr>
+        <tr>
+            <th>Python Fullstack</th>
+            <th>35000/-</th>
+        </tr>
+        <tr>
+            <th>Web Development</th>
+            <th>30000/-</th>
+        </tr>
+        <tr>
+            <th>Android App Development</th>
+            <th>50000/-</th>
+        </tr>
+    </table>
+
+    <br><br>  
+</div>
+<br><br>
+ <h2 *ngFor="let data of course">
+    <span (click)="m1(data.id)">
+        {{data.id}}
+        {{data.name}}
+        {{data.fee}}
+    </span>
+    
+</h2>
+
+<!-- <p *ngFor="let data of course">
+    <a href="javascript:void(0)" (click)="m1(data.id)">
+        {{data.id}}
+        {{data.name}}
+        {{data.fee}}
+    </a>
+</p> -->
